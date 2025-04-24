@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pong Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        .retro-font {
+            font-family: 'Press Start 2P', cursive;
+        }
+    </style>
+</head>
+<body class="bg-gray-900 min-h-screen flex flex-col items-center justify-center">
+    <div class="text-center mb-4">
+        <h1 class="text-4xl text-white mb-4 retro-font">PONG</h1>
+        <div class="text-2xl text-white mb-4 retro-font">
+            <span id="playerScore">0</span>
+            <span class="mx-4">-</span>
+            <span id="computerScore">0</span>
+        </div>
+    </div>
+    
+    <canvas id="gameCanvas" class="border-4 border-white rounded-lg"></canvas>
+    
+    <div class="mt-6 space-x-4">
+        <button id="startButton" class="retro-font bg-green-500 text-white px-6 py-3 rounded hover:bg-green-600 transition">
+            Start Game
+        </button>
+        <button id="restartButton" class="retro-font bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-600 transition hidden">
+            Restart
+        </button>
+    </div>
+    
+    <div class="text-white mt-6 max-w-md text-center">
+        <p class="mb-2">Controls:</p>
+        <p>Use <span class="bg-gray-700 px-2 py-1 rounded">W</span> to move up</p>
+        <p>Use <span class="bg-gray-700 px-2 py-1 rounded">S</span> to move down</p>
+    </div>
+
+    <script src="js/game.js"></script>
+</body>
+</html>
